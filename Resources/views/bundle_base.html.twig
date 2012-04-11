@@ -1,0 +1,20 @@
+{% extends 'NizarAppBoilerplateBundle::base.html.twig' %}
+{% set bundle = 'bundles/nizarappboilerplate/' %}
+
+
+{% block favicon %}
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    <link rel="shortcut icon" href="{{ asset (bundle ~ 'img/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset (bundle ~ 'img/apple-touch-icon.png') }}">
+{% endblock %}{# end favicon #}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset (bundle ~ 'css/style.css') }}">
+{% endblock %}{# end bundle_js #}
+
+{% block bundle_js %}
+    <!-- scripts concatenated and minified via build script -->
+    <script src="{{ asset (bundle ~ 'js/plugins.js') }}"></script>
+    <script src="{{ asset (bundle ~ 'js/script.js') }}"></script>
+    <!-- end scripts -->
+{% endblock %}
