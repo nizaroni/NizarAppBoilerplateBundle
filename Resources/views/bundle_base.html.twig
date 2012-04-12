@@ -10,11 +10,11 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ asset (bundle ~ 'css/style.css') }}">
-{% endblock %}{# end bundle_js #}
+{% endblock %}
 
 {% block bundle_js %}
     <!-- scripts concatenated and minified via build script -->
     <script src="{{ asset (bundle ~ 'js/plugins.js') }}"></script>
     <script src="{{ asset (bundle ~ 'js/script.js') }}"></script>
     <!-- end scripts -->
-{% endblock %}
+{% endblock %}{# end bundle_js #}
