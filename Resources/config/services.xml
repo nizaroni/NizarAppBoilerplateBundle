@@ -5,11 +5,14 @@
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
+        <parameter key="nizar_app_boilerplate.twig_extension.request">Symfony\Component\HttpFoundation\Request</parameter>
         <parameter key="nizar_app_boilerplate.twig_extension.class">Nizar\AppBoilerplateBundle\Twig\Extension\AppBoilerplateTwigExtension</parameter>
     </parameters>
 
     <services>
+        <service id="request" class="%nizar_app_boilerplate.twig_extension.request%" />
         <service id="nizar_app_boilerplate.twig_extension" class="%nizar_app_boilerplate.twig_extension.class%">
+            <argument type="service" id="request" />
             <tag name="twig.extension" />
         </service>
     </services>
